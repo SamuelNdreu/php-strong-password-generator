@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    
     <form action="index.php" method="get">
         <label for="length">Inserisci la lunghezza della password (min 8 caratteri):</label>
         <input type="number" id="length" name="length" min="8" max="32">
