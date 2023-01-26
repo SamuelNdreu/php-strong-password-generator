@@ -15,6 +15,12 @@
         <input type="submit">
     </form>
 
+    <?php
+    $length = isset($_GET['length']) ? $_GET['length'] : 0;
+    include_once './function.php';
+    echo "La tua password: "  . generate_password($length);
+    ?>
+
 </body>
 
 </html>
