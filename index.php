@@ -19,49 +19,55 @@
     </header>
 
     <main>
-    <h2 class="text-center">Genera una password sicura</h2>
-    <div class="container bg-white p-4">
-        <form action="./index.php" method="GET" class="row">
-            <label for="number-length" class="col-8">Genera una password sicura:</label>
-            <input type="number" name="numberLength" id="number-length" class="col-">
-            <fieldset class="col-12">
-                <div class="row align-items-center">
-                    <div class="col-8">
-                        <legend>Consenti ripetizioni di uno o più caratteri:</legend>
+        <h2 class="text-center">Genera una password sicura</h2>
+        <div class="container bg-white p-4">
+            <form action="./index.php" method="GET" class="row">
+                <label for="number-length" class="col-8">Genera una password sicura:</label>
+                <input type="number" name="numberLength" id="number-length" class="col-">
+                <fieldset class="col-12">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <legend>Consenti ripetizioni di uno o più caratteri:</legend>
+                            </div>
+                            <div class="col-4">
+                            <input type="radio" name="repeat" id="repeat" value="true">
+                            <label for="repeat">Si</label>
+                            <input type="radio" name="repeat" id="repeat" value="false" checked>
+                            <label for="noRepeat">No</label>
                         </div>
-                        <div class="col-4">
-                        <input type="radio" name="repeat" id="repeat" value="true">
-                        <label for="repeat">Si</label>
-                        <input type="radio" name="repeat" id="repeat" value="false" checked>
-                        <label for="noRepeat">No</label>
+                    </div>
+                </fieldset>
+
+                    <div class="row">
+                <div class="col-8">
+                    <div>Seleziona i tipi di caratteri:</div>
+                </div>
+                <div class="col-4 ps-3">
+                    <div>
+                        <input type="checkbox" id="letters" name="lettersCheck" checked>
+                        <label for="lettersCheck">Lettere</label>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" id="numbers" name="numbersCheck" checked>
+                        <label for="numbersCheck">Numeri</label>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" id="symbols" name="symbolsCheck" checked>
+                        <label for="symbolsCheck">Simboli</label>
                     </div>
                 </div>
-            </fieldset>
+            </div>
+                <button type="submit" class="col-1 btn btn-primary">Invia</button>
+            </form>
 
-                <div class="row">
-            <div class="col-8">
-                <div>Seleziona i tipi di caratteri:</div>
-            </div>
-            <div class="col-4 ps-3">
-                <div>
-                    <input type="checkbox" id="letters" name="lettersCheck" checked>
-                    <label for="lettersCheck">Lettere</label>
-                </div>
-                
-                <div>
-                    <input type="checkbox" id="numbers" name="numbersCheck" checked>
-                    <label for="numbersCheck">Numeri</label>
-                </div>
-                
-                <div>
-                    <input type="checkbox" id="symbols" name="symbolsCheck" checked>
-                    <label for="symbolsCheck">Simboli</label>
-                </div>
-            </div>
+
+            <?php
+
+            ?>
         </div>
-            <button type="submit" class="col-1 btn btn-primary">Invia</button>
-        </form>
-
+    </main>
 
 </body>
 </html>    
