@@ -2,6 +2,8 @@
 session_start();
 include_once __DIR__ . "/partials/_function.php";
 
+
+
 $letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 $numbers = "0123456789";
 $symbols = "!£$%&*#@";
@@ -26,7 +28,16 @@ $characters = getKindOfCharacters($letters, $numbers, $symbols, $haveLetters, $h
 
 <body class="bg-primary">
     <header>
-        <h1 class="text-center">Strong Password Generator</h1>
+    <nav class="navbar bg-primary-subtle mb-4 justify-content-center">
+            <div class="container ">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1000/1000915.png" alt="Logo" width="60"
+                        height="60">
+                    <h1 class="ps-2 mt-3 text-dark ">Password Generator</h1>
+                </a>
+            </div>
+        </nav>
+
     </header>
 
     <main>
@@ -72,6 +83,10 @@ $characters = getKindOfCharacters($letters, $numbers, $symbols, $haveLetters, $h
             </div>
                 <button type="submit" class="col-1 btn btn-primary">Invia</button>
             </form>
+
+            <div class="container">
+                
+            </div>
 
 
             <?php
