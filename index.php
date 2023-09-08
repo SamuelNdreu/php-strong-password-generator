@@ -1,4 +1,15 @@
+<?php
+session_start();
+include_once __DIR__ . "/partials/_function.php";
 
+$letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+$numbers = "0123456789";
+$symbols = "!£$%&*#@";
+$haveLetters = $_GET["lettersCheck"] ?? false;
+$haveNumbers = $_GET["numbersCheck"] ?? false;
+$haveSymbos = $_GET["symbolsCheck"] ?? false;
+$characters = getKindOfCharacters($letters, $numbers, $symbols, $haveLetters, $haveNumbers, $haveSymbos);
+?>
 
 
 <!DOCTYPE html>
@@ -64,7 +75,11 @@
 
 
             <?php
-
+            if (isset($_GET["numberLength"]) && isset($_GET["repeat"])) {
+                $passwordGenerated = $_GET["repeat"] == "true" ? getRandomPasswordNoRepet($characters, $_GET["numberLength"]) : getRandomPassword($characters, $_GET["numberLength"]);
+                $_SESSION["password"] = $passwordGenerated;
+                header('Location: ./psw.php');
+            }
             ?>
         </div>
     </main>

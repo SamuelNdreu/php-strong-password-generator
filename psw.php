@@ -11,10 +11,16 @@
     <title>Psw</title>
     </head>
     <body>
-    <?php 
-    if(!empty($_SESSION["password"])){
-    echo $_SESSION["password"];
-    }
-    ?> 
+        
+        <h2 class="text-center font-primary">Grazie per aver scelto incugenerator</h2>
+            <div class="container bg-white p-4 text-center">
+                <form action="./index.php" method="GET" class="row">
+                    <h2 class="primary">La tua password è</h2>
+                    <?php 
+                    if(!empty($_SESSION["password"])){
+                    echo $_SESSION["password"];
+                    }
+                    ?> 
+            </div>
     </body>
     </html>
